@@ -1,0 +1,12 @@
+When your affiliate platform gives you a verification method:
+
+META TAG:
+Paste the exact meta tag inside <head> in the HTML pages, under the SITE VERIFICATION comment.
+
+HTML FILE:
+Put the exact verification file in this repository root, next to index.html.
+
+DNS:
+Do not use DNS verification until you own and connect a custom domain.
+
+Never invent a verification token.
