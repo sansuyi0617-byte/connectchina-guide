@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>ConnectChina Guide — China eSIM Comparison for Travelers</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Independent China eSIM and travel connectivity comparison for international visitors.">
+<!-- SITE VERIFICATION:
+When an affiliate network gives you a META verification tag, paste the exact tag below this comment.
+Do NOT invent a verification tag.
+-->
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Connect<span>China</span> Guide</a>
+    <nav>
+      <a href="compare.html">Compare</a>
+      <a href="guide.html">China eSIM Guide</a>
+      <a href="about.html">About</a>
+      <a href="disclosure.html">Affiliate Disclosure</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">China travel connectivity</div>
+    <h1>Find the right eSIM for your trip to China.</h1>
+    <p class="lead">Compare travel eSIM options by trip length, expected data use, hotspot needs and travel style. Built for international visitors who want a clearer way to choose connectivity before arriving in China.</p>
+    <div class="actions">
+      <a class="btn primary" href="#selector">Try the selector</a>
+      <a class="btn" href="compare.html">Compare providers</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid">
+      <div class="card"><div class="kicker">01 · Before arrival</div><h3>Prepare before you land</h3><p>Travel eSIM setup is often easiest before entering China. We focus on practical pre-arrival preparation rather than generic mobile-plan advice.</p></div>
+      <div class="card"><div class="kicker">02 · Decision support</div><h3>Choose by use case</h3><p>A 7-day city trip, a 30-day business trip and a heavy-hotspot user should not all receive the same recommendation.</p></div>
+      <div class="card"><div class="kicker">03 · Independent comparison</div><h3>Multiple providers</h3><p>Our goal is to compare several travel connectivity options instead of pushing a single merchant to every traveler.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="selector">
+  <div class="wrap">
+    <div class="router">
+      <div class="kicker" style="color:#9fb3ff">Prototype decision engine</div>
+      <h2 style="color:white">What kind of China trip are you planning?</h2>
+      <div class="router-grid">
+        <div>
+          <label for="days">Trip length</label>
+          <select id="days">
+            <option value="5">3–5 days</option>
+            <option value="10" selected>6–10 days</option>
+            <option value="15">11–15 days</option>
+            <option value="30">16–30 days</option>
+          </select>
+        </div>
+        <div>
+          <label for="usage">Expected data use</label>
+          <select id="usage">
+            <option value="light">Light — maps, messaging</option>
+            <option value="normal" selected>Normal — social, maps, video</option>
+            <option value="heavy">Heavy — hotspot, calls, uploads</option>
+          </select>
+        </div>
+        <div>
+          <label for="traveler">Travel style</label>
+          <select id="traveler">
+            <option value="leisure" selected>Leisure</option>
+            <option value="business">Business / remote work</option>
+            <option value="frequent">Frequent international traveler</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn primary" onclick="recommend()">Get a starting recommendation</button>
+      </div>
+      <div id="routerResult" class="router-result">Select your trip profile to see which type of plan deserves a closer look.</div>
+    </div>
+    <p class="small">This selector is an editorial comparison aid, not a telecom service. Live plan prices, coverage, fair-use limits and device compatibility can change; always verify the provider's latest terms before purchase.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid two">
+    <div>
+      <div class="eyebrow">Why this site exists</div>
+      <h2>Connectivity in China has extra travel friction.</h2>
+      <p class="lead">International visitors often need to decide what to install before departure, whether hotspot use matters, and how much data is actually necessary. Those are decision problems—not just price-comparison problems.</p>
+    </div>
+    <div class="card">
+      <h3>Our comparison principles</h3>
+      <p>We compare providers using traveler-relevant factors: plan duration, data allowance, fair-use policy, hotspot support, recurring use case, public affiliate terms and product availability. Where we do not have reliable evidence, we label it as unknown rather than guessing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>Useful China connectivity guides</h2>
+    <div class="grid">
+      <a class="card" href="guide.html" style="text-decoration:none"><h3>China eSIM guide</h3><p>What to prepare before arrival, what to compare and what can go wrong.</p></a>
+      <a class="card" href="compare.html" style="text-decoration:none"><h3>Provider comparison</h3><p>A transparent framework for comparing Airalo, Saily, Ubigi, Yesim and other travel eSIM options.</p></a>
+      <a class="card" href="disclosure.html" style="text-decoration:none"><h3>How we make money</h3><p>Our affiliate disclosure and the rules we use to keep recommendations separate from commission.</p></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 ConnectChina Guide. Independent travel connectivity research.</div>
+    <div>
+      <a href="privacy.html">Privacy</a> ·
+      <a href="disclosure.html">Affiliate Disclosure</a> ·
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function recommend(){
+  const d=+document.getElementById('days').value;
+  const u=document.getElementById('usage').value;
+  const t=document.getElementById('traveler').value;
+  let title='', body='';
+  if(t==='frequent'){
+    title='Compare recurring-use and multi-country options';
+    body='For frequent travelers, do not optimize only for the cheapest China trip. Compare account reuse, top-ups, multi-country availability and whether repeat purchases remain convenient.';
+  } else if(u==='heavy' || t==='business'){
+    title='Prioritize high-data and hotspot-friendly plans';
+    body='Your first comparison should focus on fair-use rules, hotspot support and what happens after the full-speed allowance is used—not just whether a plan is labeled “unlimited”.';
+  } else if(d<=10){
+    title='Start with a smaller fixed-data plan';
+    body='For a short leisure trip, a fixed-data plan is often easier to compare. Focus on setup simplicity, total data allowance and whether you can install it before departure.';
+  } else {
+    title='Compare mid-size 10–20GB plans first';
+    body='For a typical 1–2 week trip, start with 10–20GB options and compare price, hotspot support and validity. Heavy video users may need an unlimited-style plan instead.';
+  }
+  document.getElementById('routerResult').innerHTML='<strong>'+title+'</strong><br>'+body+'<br><br><a class="btn" href="compare.html">Open provider comparison</a>';
+}
+</script>
+</body>
+</html>
